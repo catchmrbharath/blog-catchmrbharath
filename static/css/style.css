@@ -1,0 +1,14 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu+Mono:700italic')
+
+body {
+    background-image: url(../grid.png)
+    background-repeat: repeat;
+}
+
+h1 {
+    font-family: 'Ubuntu Mono';
+    font-weight: 700;
+}
+
+
+
