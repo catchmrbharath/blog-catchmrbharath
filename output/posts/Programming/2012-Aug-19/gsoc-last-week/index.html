@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>GSoC last week</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../../.././theme/css/main.css" type="text/css" />
+        
+        <link href="www.catchmrbharath.in/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Bharath M R Atom Feed" />
+        
+        
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../.././css/ie.css"/>
+                <script src="../../../.././js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../.././css/ie6.css"/><![endif]-->
+
+        <script type="text/javascript"
+               src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+                MathJax.Hub.Config({
+                        "tex2jax": { inlineMath: [ [ '$', '$' ] ] }
+                            });
+                        </script>
+
+</head>
+
+<body id="index" class="home">
+
+<a href="https://github.com/catchmrbharath">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
+
+        <header id="banner" class="body">
+                <h1><a href="../../../../.">Bharath M R </a></h1>
+                <nav><ul>
+                
+                
+                
+                
+                
+                    <li class="active"><a href="../../../.././category/programming.html">Programming</a></li>
+                
+                </ul></nav>
+        </header><!-- /#banner -->
+        
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="posts/Programming/2012-Aug-19/gsoc-last-week/" rel="bookmark"
+           title="Permalink to GSoC last week">GSoC last week</a></h1>
+      
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="catchmrbharath">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+    </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2012-08-19T00:00:00">
+                Sun 19 August 2012
+        </abbr>
+
+        
+        <address class="vcard author">
+                By <a class="url fn" href="../../../.././author/bharath-m-r.html">Bharath M R</a>
+        </address>
+        
+<p>In <a href="../../../.././category/programming.html">Programming</a>. </p>
+<p>tags: <a href="../../../.././tag/gsoc.html">[gsoc]</a></p>
+
+
+</footer><!-- /.post-info -->
+      <p>This happens to be the last week of GSoC. The major things that I accomplished this
+week are</p>
+<ul>
+<li>Got pylab to work interactively.</li>
+<li>Made more changes to the documentation of plotting module. </li>
+</ul>
+<p>I have a pull request for the restructured plotting module at <a href="https://github.com/sympy/sympy/pull/1468">here</a>.
+There has been lots of discussions on how the new plot API should look like in the pull request.
+The API as of now has 5 functions:</p>
+<ul>
+<li><code>plot_line</code> which plots 2D line plots, which I think I will change to <code>plot</code>.</li>
+<li><code>plot_parametric</code> which plots 2D parametric plots.</li>
+<li><code>plot3D</code> which plots 3D plots.</li>
+<li><code>plot3D_parametric</code> which plots 3D parametric line plots. I think I will have to 
+change it into <code>plot_parametric3D</code>.</li>
+<li><code>plot3D_surface</code> which plots 3D parametric surfaces.</li>
+</ul>
+<p>The names are slightly confusing, but the alternative to these names are big. If you
+have any good names for 3D plots, please leave it in the comments.</p>
+<p>I will have another post describing the things I learnt over this GSoC period.
+{% include JB/setup %}</p>
+    </div><!-- /.entry-content -->
+    
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "posts/Programming/2012-Aug-19/gsoc-last-week/";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://bharathsblog.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+    
+
+  </article>
+</section>
+
+        <section id="extras" class="body">
+        
+        
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'bharathsblog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</body>
+</html>

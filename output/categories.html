@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
         
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Bharath M R Atom Feed" />
+        <link href="www.catchmrbharath.in/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Bharath M R Atom Feed" />
         
         
 
@@ -19,9 +19,24 @@
         <!--[if lt IE 7]>
                 <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
 
+        <script type="text/javascript"
+               src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+                MathJax.Hub.Config({
+                        "tex2jax": { inlineMath: [ [ '$', '$' ] ] }
+                            });
+                        </script>
+
 </head>
 
 <body id="index" class="home">
+
+<a href="https://github.com/catchmrbharath">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
 
         <header id="banner" class="body">
                 <h1><a href=".">Bharath M R </a></h1>
@@ -31,14 +46,14 @@
                 
                 
                 
-                    <li ><a href="./category/blog.html">Blog</a></li>
+                    <li ><a href="./category/programming.html">Programming</a></li>
                 
                 </ul></nav>
         </header><!-- /#banner -->
         
 <ul>
 
-    <li><a href="./category/blog.html">Blog</a></li>
+    <li><a href="./category/programming.html">Programming</a></li>
 
 </ul>
 
@@ -57,6 +72,16 @@
 
 
 
+
+<script type="text/javascript">
+    var disqus_shortname = 'bharathsblog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 
 </body>
 </html>

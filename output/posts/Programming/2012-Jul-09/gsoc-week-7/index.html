@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>GSoC week 7</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../../../.././theme/css/main.css" type="text/css" />
+        
+        <link href="www.catchmrbharath.in/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Bharath M R Atom Feed" />
+        
+        
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../.././css/ie.css"/>
+                <script src="../../../.././js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="../../../.././css/ie6.css"/><![endif]-->
+
+        <script type="text/javascript"
+               src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+                MathJax.Hub.Config({
+                        "tex2jax": { inlineMath: [ [ '$', '$' ] ] }
+                            });
+                        </script>
+
+</head>
+
+<body id="index" class="home">
+
+<a href="https://github.com/catchmrbharath">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
+
+        <header id="banner" class="body">
+                <h1><a href="../../../../.">Bharath M R </a></h1>
+                <nav><ul>
+                
+                
+                
+                
+                
+                    <li class="active"><a href="../../../.././category/programming.html">Programming</a></li>
+                
+                </ul></nav>
+        </header><!-- /#banner -->
+        
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="posts/Programming/2012-Jul-09/gsoc-week-7/" rel="bookmark"
+           title="Permalink to GSoC week 7">GSoC week 7</a></h1>
+      
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="catchmrbharath">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+    </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2012-07-09T00:00:00">
+                Mon 09 July 2012
+        </abbr>
+
+        
+        <address class="vcard author">
+                By <a class="url fn" href="../../../.././author/bharath-m-r.html">Bharath M R</a>
+        </address>
+        
+<p>In <a href="../../../.././category/programming.html">Programming</a>. </p>
+<p>tags: <a href="../../../.././tag/gsoc.html">[gsoc]</a></p>
+
+
+</footer><!-- /.post-info -->
+      <p>This week has been quite eventful. The implicit plotting module is almost done. I added the functionality of combining expressions using the <code>And</code> and <code>Or</code> statements. Now you can do
+<code>plot_implicit(And(Eq(y, exp(x)), y - x &gt; 2)</code>
+and get a plot as below. So now you can combine any number of equations / inequalities and plot it. I think its possible to do a lot of cool stuff combining equations / inequalities.
+<img src="../../../../static/images/09072012/fig1.png" width="600" height= "400" /></p>
+<p>Plotting through interval math is awesome but is also very limited. You cannot add support to <code>re()</code>, to functions that you cannot characterize as monotonic in certain regions. But we always encounter such functions. So there should be some fall back algorithm to plot such plots. I implemented the fall back algorithm last week. The idea is borrowed from sage implicit plots. We convert an equation / inequality into a function which returns 1 if it satisfies and -1 if it doesn't satisfy. So if you are plotting an equality then you plot using the <code>contour</code> command of matplotlib, and instruct it to plot only the zero contour. If its an inequality then plotting the region with two colors gives the plot required. </p>
+<p>These are examples from the fallback algorithm.</p>
+<p>Plot of <mathjax>$y^{2}=x^{3}-x$</mathjax>
+<img src="../../../../static/images/09072012/fig2.png" width="600" height= "400" /></p>
+<p>The plot with interval arithmetic is more precise.
+<img src="../../../../static/images/09072012/fig3.png" width="600" height= "400" /></p>
+<p>I haven't finished with the tests. Once I finish the tests I can send a pull request. The pull request will be pretty big, but most of the things have been reviewed in my previous pull request. This is just an extension of the previous pull request.</p>
+<p>There are certain problems with the module though. The line width problem which I mentioned in my previous blog post, cannot be fixed. So you will have to change to the fall back method if the line width becomes large. Also the fall back algorithm cannot plot boolean combinations of equations / inequalities. So the two methods complement each other largely. So the next question would be whether we can choose one of the two intelligently. I guess the answer is No. That decision must be taken by the user. But most of the times the interval math approach works very nicely. </p>
+    </div><!-- /.entry-content -->
+    
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "posts/Programming/2012-Jul-09/gsoc-week-7/";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://bharathsblog.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+    
+
+  </article>
+</section>
+
+        <section id="extras" class="body">
+        
+        
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'bharathsblog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</body>
+</html>

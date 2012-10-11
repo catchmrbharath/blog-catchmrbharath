@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Bharath M R - plotting]</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href=".././theme/css/main.css" type="text/css" />
+        
+        <link href="www.catchmrbharath.in/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Bharath M R Atom Feed" />
+        
+        
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href=".././css/ie.css"/>
+                <script src=".././js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href=".././css/ie6.css"/><![endif]-->
+
+        <script type="text/javascript"
+               src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript">
+                MathJax.Hub.Config({
+                        "tex2jax": { inlineMath: [ [ '$', '$' ] ] }
+                            });
+                        </script>
+
+</head>
+
+<body id="index" class="home">
+
+<a href="https://github.com/catchmrbharath">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
+
+        <header id="banner" class="body">
+                <h1><a href="../.">Bharath M R </a></h1>
+                <nav><ul>
+                
+                
+                
+                
+                
+                    <li ><a href=".././category/programming.html">Programming</a></li>
+                
+                </ul></nav>
+        </header><!-- /#banner -->
+                
+
+            
+
+        
+        
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href=".././posts/Programming/2012-Jul-02/gsoc-week-6/">GSoC Week 6</a></h1> 
+                    <footer class="post-info">
+        <abbr class="published" title="2012-07-02T00:00:00">
+                Mon 02 July 2012
+        </abbr>
+
+        
+        <address class="vcard author">
+                By <a class="url fn" href=".././author/bharath-m-r.html">Bharath M R</a>
+        </address>
+        
+<p>In <a href=".././category/programming.html">Programming</a>. </p>
+<p>tags: <a href=".././tag/gsoc.html">[gsoc</a><a href=".././tag/plotting.html">plotting]</a></p>
+
+
+</footer><!-- /.post-info --><p>I have been trying to improve the implicit plotting module during this week. But I have hit a road block. I almost ran out of ideas to solve the problem.</p>
+<p>Description:</p>
+<p>The implicit plotting algorithm I implemented works something like below:</p>
+<p>1) Get x and y interval. If it satisfies the expression throughout the interval, then plot it.</p>
+<p>2) If it does not satisfy, throw away the intervals.</p>
+<p>3) If it partially satisfies, then recursively subdivide into four intervals, and try again.</p>
+<p>For cases of equality, the first point never holds true due to floating point errors. So we go on
+eliminating regions, and after a certain depth, plot the remaining region. These are the regions where there is at least one solution. This is the reason why the plots are rasterized. But there is an inherent bigger problem here. In the cases of expressions like <mathjax>$x^{3}$</mathjax> even if the x interval is small, the resulting interval after computation will be large. Sometimes, due to these large intervals, there might be lots of y and x intervals which satisfy because of these errors. Even if we make x interval really small, the corresponding y interval will be large, ie the line widths become large. The explanation is more of a guess rather than the right explanation.</p>
+<p>Examples:</p>
+<p>Plot of <mathjax>$x^{y}=y^{x}$</mathjax>
+<img src="../static/images/02072012/fig1.png" width="600" height= "400" />
+Even if I increase my depth of recursion to higher values, the thickness becomes less, but doesn't vanish. The plot actually should have been two separate curves.</p>
+<p><img src="../static/images/02072012/fig3.png" width="600" height= "400" /></p>
+<p>The Mac OSX's Grapher uses a similar algorithm(A guess because they have similar rasterization) but takes care of the line widths.</p>
+<p>If you feel you know where the problem is, please comment or email me. :)</p><p>There are <a href=".././posts/Programming/2012-Jul-02/gsoc-week-6/#disqus_thread">comments</a>.</p>
+                </article>
+                
+                    
+<p class="paginator">
+    
+    Page 1 / 1
+    
+</p>
+
+                
+            </aside><!-- /#featured -->
+            
+        
+        
+        
+            </ol><!-- /#posts-list -->
+            
+            </section><!-- /#content -->
+        
+    
+
+
+        <section id="extras" class="body">
+        
+        
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'bharathsblog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</body>
+</html>
