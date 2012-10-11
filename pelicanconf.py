@@ -3,7 +3,7 @@
 
 AUTHOR = u"Bharath M R"
 SITENAME = u"Bharath M R"
-SITEURL = ''
+SITEURL = 'www.catchmrbharath.in'
 
 TIMEZONE = 'Asia/Kolkata'
 
@@ -19,7 +19,13 @@ DEFAULT_LANG = 'en'
 #SOCIAL = (('You can add links in your config file', '#'),
           #('Another social link', '#'),)
 
+FILES_TO_COPY = (('CNAME', 'CNAME'), )
 DEFAULT_PAGINATION = 10
-STATIC_PATHS = ['images']
+THEME = 'theme'
+STATIC_PATHS = ['images', ]
 ARTICLE_URL = 'posts/{category}/{date:%Y}-{date:%b}-{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{category}/{date:%Y}-{date:%b}-{date:%d}/{slug}/index.html'
+MD_EXTENSIONS = ['codehilite', 'mathjax']
+TWITTER_USERNAME = 'catchmrbharath'
+GITHUB_URL = 'https://github.com/catchmrbharath'
+DISQUS_SITENAME = 'bharathsblog'

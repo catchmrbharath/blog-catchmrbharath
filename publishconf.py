@@ -18,3 +18,5 @@ DELETE_OUTPUT_DIRECTORY = True
 #GOOGLE_ANALYTICS = ""
 ARTICLE_URL = 'posts/{category}/{date}/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date}-{slug}.html'
+TWITTER_USERNAME = 'catchmrbharath'
+GITHUB_URL = 'https://github.com/catchmrbharath'
