@@ -29,3 +29,4 @@ MD_EXTENSIONS = ['codehilite', 'mathjax']
 TWITTER_USERNAME = 'catchmrbharath'
 GITHUB_URL = 'https://github.com/catchmrbharath'
 DISQUS_SITENAME = 'bharathsblog'
+GOOGLE_ANALYTICS = 'UA-35535020-1'
